@@ -18,18 +18,18 @@ const navigation = useNavigation();
     return (
         <View style={styles.container}>
 
-            <View style={styles.containerLogo}>
+            <Animatable.View style={styles.containerLogo}>
                 <Animatable.Image
                     animation="flipInY"
                     source={require('../../assets/Logo-redondo.png')}
                     style={{ width: '100%' }}
                     resizeMode='contain'
                 />
-            </View>
+            </Animatable.View>
 
             <Animatable.View delay={600} animation="fadeInUp" style={styles.containerForm}>
-                <Text style={styles.title}>Monitore, organize seus gastos de qualquer lugar!</Text>
-                <Text style={styles.text}>Faça o login para começar.</Text>
+                <Text style={styles.title}>Bem vindo ao seu aplicativo de presença!</Text>
+                <Text style={styles.text}>Faça o login para começar!!.</Text>
             
              <TouchableOpacity 
              style={styles.button}
@@ -45,11 +45,11 @@ const navigation = useNavigation();
 const styles = StyleSheet.create({
     container:{
         flex: 1,
-        backgroundColor: '#38a69d'
+        backgroundColor: '#CFCBC3'
     },
     containerLogo:{
         flex: 2,
-        backgroundColor: '#38a69d',
+        backgroundColor: '#CFCBC3',
         justifyContent: 'center',
         alignItems: 'center'
     },
@@ -65,14 +65,16 @@ const styles = StyleSheet.create({
         fontSize: 24,
         fontWeight: 'bold',
         marginTop: 28,
-        marginBottom: 12
+        marginBottom: 12,
+        textAlign:'center'
     },
     text:{
-        color: '#a1a1a1'
+        color: '#a1a1a1',
+        alignSelf: 'center'
     },
     button:{
         position: 'absolute',
-        backgroundColor: '#38a69d',
+        backgroundColor: '#002659',
         borderRadius: 50,
         paddingVertical: 8,
         width: '60%',
@@ -84,6 +86,7 @@ const styles = StyleSheet.create({
     buttonText:{
         fontSize: 18,
         color: '#fff',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        
     }
 })
