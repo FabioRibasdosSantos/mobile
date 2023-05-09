@@ -12,9 +12,10 @@ export default function Routes(){
     return (
         <Stack.Navigator>
             <Stack.Screen
-                name="Welcome"
+                name="GoTech"
                 component={Welcome}
                 options={{headerShow: false}}
+                
             />
 
             <Stack.Screen
