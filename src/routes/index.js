@@ -5,6 +5,7 @@ const Stack = createNativeStackNavigator();
 
 import Welcome from '../pages/Welcome'
 import SingIn from '../pages/SingIn'
+import Password from '../pages/Password'
 
 const stack = createNativeStackNavigator();
 
@@ -23,6 +24,14 @@ export default function Routes(){
                 component={SingIn}
                 options={{headerShow: false}}
             />
+
+            <Stack.Screen
+                name="Password"
+                component={Password}
+                options={{headerShow: false}}
+            />
+
+
         </Stack.Navigator>
     )
 }

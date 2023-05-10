@@ -35,7 +35,7 @@ const navigation = useNavigation();
              style={styles.button}
              onPress={ () => navigation.navigate('SingIn')}
              >
-                <Text style={styles.buttonText}>Acessar</Text>
+                <Text style={styles.buttonText}>Login</Text>
             </TouchableOpacity>   
             </Animatable.View>
         </View>
