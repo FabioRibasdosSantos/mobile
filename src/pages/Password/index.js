@@ -23,7 +23,9 @@ export default function Password() {
                 onPress: () => console.log("Cancel Pressed"),
                 style: "cancel"
               },
-              { text: "OK", onPress: () => console.log("OK Pressed") }
+              { 
+                text: "OK", 
+                onPress: () => console.log("OK Pressed") }
             ]
           );
     
@@ -46,7 +48,7 @@ export default function Password() {
 
                 <TouchableOpacity 
                 style={styles.button}
-                onPress={createButtonAlert}
+                onPress={createButtonAlert} 
                 >
                     <Text style={styles.buttonText}>Recuperar Senha</Text>
                 </TouchableOpacity>
