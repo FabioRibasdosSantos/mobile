@@ -9,8 +9,11 @@ import {
 } from 'react-native';
 
 import * as Animatable from 'react-native-animatable'
+import {useNavigation} from '@react-navigation/native'
 
 export default function Password() {
+
+    const navigation = useNavigation();
 
     
         const createButtonAlert = () =>
@@ -25,8 +28,7 @@ export default function Password() {
               },
               { 
                 text: "OK", 
-                onPress: () => console.log("OK Pressed") 
-                
+                onPress: () => navigation.navigate('SingIn'),
             }
             ]
           );

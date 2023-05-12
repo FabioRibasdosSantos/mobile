@@ -8,6 +8,7 @@ import SingIn from '../pages/SingIn'
 import Password from '../pages/Password'
 import Topics from '../pages/Topics'
 
+
 const stack = createNativeStackNavigator();
 
 export default function Routes(){
