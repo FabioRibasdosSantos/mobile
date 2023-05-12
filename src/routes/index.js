@@ -6,7 +6,8 @@ const Stack = createNativeStackNavigator();
 import Welcome from '../pages/Welcome'
 import SingIn from '../pages/SingIn'
 import Password from '../pages/Password'
-import Topics from '../pages/Topics';
+import Topics from '../pages/Topics'
+
 
 const stack = createNativeStackNavigator();
 
@@ -37,7 +38,6 @@ export default function Routes(){
                 component={Topics}
                 options={{headerShow: false}}
             />
-
 
         </Stack.Navigator>
     )

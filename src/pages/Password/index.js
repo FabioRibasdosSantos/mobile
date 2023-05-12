@@ -29,7 +29,6 @@ export default function Password() {
               { 
                 text: "OK", 
                 onPress: () => navigation.navigate('SingIn'),
-                            
             }
             ]
           );
