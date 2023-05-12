@@ -25,7 +25,9 @@ export default function Password() {
               },
               { 
                 text: "OK", 
-                onPress: () => console.log("OK Pressed") }
+                onPress: () => console.log("OK Pressed") 
+                
+            }
             ]
           );
     
