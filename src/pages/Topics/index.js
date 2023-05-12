@@ -10,46 +10,38 @@ import {
 import * as Animatable from 'react-native-animatable'
 import {useNavigation} from '@react-navigation/native'
 
-export default function SignIn() {
+export default function Topics() {
     const navigation = useNavigation();
     return (
         <View style={styles.container}>
+            
             <Animatable.View animation="fadeInLeft" delay={500} style={styles.containerHeader} >
-                <Text style={styles.message}>Bem-vindo</Text>
+                <Text style={styles.message}>Nome do Aluno</Text>
             </Animatable.View>
 
-            <Animatable.View animation="fadeInUp" style={styles.containerForm}>
-                <Text style={styles.title}>E-mail</Text>
-                <TextInput 
-                placeholder='Digite seu e-mail...'
-                style={styles.input}
+            <View animation="fadeInUp" style={styles.containerForm}>
                 
-                />
-
-                <Text style={styles.title}>Senha</Text>
-                <TextInput 
-                placeholder='Sua senha'
-                style={styles.input}
-                secureTextEntry={true}
-                />
-
-                <TouchableOpacity 
-                style={styles.button}
-                onPress={ () => navigation.navigate('Topics')}
-                >
-                    <Text style={styles.buttonText}>Acessar</Text>
+                <TouchableOpacity style={styles.topic}>
+                    <Text style={styles.topicText}>Caixa 1</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity 
-                style={styles.buttonRegister}
-                onPress={ () => navigation.navigate('Password')} 
-                >
-                    <Text style={styles.registerText}>Esqueci minha Senha</Text>
+                <TouchableOpacity style={styles.topic}>
+                    <Text style={styles.topicText}>Caixa 2</Text>
                 </TouchableOpacity>
+
+                <TouchableOpacity style={styles.topic}>
+                    <Text style={styles.topicText}>Caixa 3</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={styles.topic}>
+                    <Text style={styles.topicText}>Caixa 4</Text>
+                </TouchableOpacity>
+
+
 
               
 
-            </Animatable.View>
+            </View>
 
         </View>
     );
@@ -59,10 +51,18 @@ const styles = StyleSheet.create({
     container:{
         flex: 1,
         backgroundColor: '#002659'
-    },
-    containerHeader:{
-        marginTop: '14%',
-        marginBottom: '8%',
+    }, 
+        topic: { 
+            
+            marginTop: '14%',
+            marginBottom: '8%',
+            paddingStart: '5%'
+        },
+
+      containerHeader:{
+
+        marginTop: '20%',
+        marginBottom: '20%',
         paddingStart: '5%'
     },
     message:{
@@ -72,12 +72,15 @@ const styles = StyleSheet.create({
         textAlign:'center'
     },
     containerForm:{
+        flexDirection:'row',
+        flexWrap:'wrap',
         backgroundColor: '#fff',
-        flex: 1,
-        borderTopLeftRadius: 25,
-        borderBottomRightRadius: 25,
-        paddingStart: '5%',
-        paddingEnd: '5%'
+        padding: 30,
+        justifyContent:"space-between"
+        
+
+
+
     },
     title:{
         fontSize: 20,
