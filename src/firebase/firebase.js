@@ -7,17 +7,15 @@ import 'firebase/database';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCvnndlz87aTR2pcMBIos3-F2MGpghv2EI",
-  authDomain: "bd-gotech.firebaseapp.com",
-  projectId: "bd-gotech",
-  storageBucket: "bd-gotech.appspot.com",
-  messagingSenderId: "734472449595",
-  appId: "1:734472449595:web:79e6e9bf3c956505acb61e"
+  apiKey: "AIzaSyCYwtm7bBalWLJQrBaRqPOhgJLdrD6HaJ4",
+  authDomain: "fir-cf946.firebaseapp.com",
+  projectId: "fir-cf946",
+  storageBucket: "fir-cf946.appspot.com",
+  messagingSenderId: "134707480741",
+  appId: "1:134707480741:web:3142038d76351282bee54c"
 };
 
 // Initialize Firebase
-if (!firebase.apps.length) {
-  firebase.initializeApp(firebaseConfig);
-}
+firebase.initializeApp(firebaseConfig);
 
 export default firebase;
