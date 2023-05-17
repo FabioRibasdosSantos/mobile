@@ -6,13 +6,13 @@ import {
   TextInput,
   TouchableOpacity,
 } from 'react-native';
-import firebase from '../../firebase'; // Adjust the import path
+//import firebase from '../../firebase'; // Adjust the import path
 
 import * as Animatable from 'react-native-animatable';
 import { useNavigation } from '@react-navigation/native';
 
 export default function SignIn() {
-  const [email, setEmail] = useState('');
+/*  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleEmailChange = (text) => setEmail(text);
@@ -25,7 +25,7 @@ export default function SignIn() {
       .then(() => navigation.navigate('Topics'))
       .catch((error) => alert(error.message));
   };
-
+*/
   const navigation = useNavigation();
   return (
     <View style={styles.container}>
@@ -51,11 +51,11 @@ export default function SignIn() {
           onChangeText={handlePasswordChange}
         />
 
-        <TouchableOpacity style={styles.button} onPress={() => handleSignIn()}>
+        <TouchableOpacity style={styles.button} /* onPress={() => handleSignIn()} */>
           <Text style={styles.buttonText}>Acessar</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.buttonRegister} onPress={() => navigation.navigate('Password')}>
+        <TouchableOpacity style={styles.buttonRegister} /*onPress={() => navigation.navigate('Password')}*/>
           <Text style={styles.registerText}>Esqueci minha Senha</Text>
         </TouchableOpacity>
       </Animatable.View>
