@@ -21,9 +21,12 @@ export default function Topics() {
 
             <View animation="fadeInUp" style={styles.containerForm}>
                 
-                <TouchableOpacity style={styles.topic}>
-                    <Text style={styles.topicText}>Caixa 1</Text>
-                </TouchableOpacity>
+            <TouchableOpacity 
+             style={styles.button}
+             onPress={ () => navigation.navigate('SingIn')}
+             >
+                <Text style={styles.buttonText}>Login</Text>
+            </TouchableOpacity>
 
                 <TouchableOpacity style={styles.topic}>
                     <Text style={styles.topicText}>Caixa 2</Text>

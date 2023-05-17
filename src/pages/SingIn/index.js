@@ -24,7 +24,7 @@ export default function SignIn() {
         .then(() => navigation.navigate('Topics'))
         .catch((error) => alert(error.message));
     };
-
+    
     const navigation = useNavigation();
     return (
         <View style={styles.container}>
