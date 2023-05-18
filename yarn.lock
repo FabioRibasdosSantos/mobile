@@ -7789,6 +7789,11 @@ react-native-codegen@^0.71.5:
     jscodeshift "^0.13.1"
     nullthrows "^1.1.1"
 
+react-native-fast-image@^8.6.3:
+  version "8.6.3"
+  resolved "https://registry.npmjs.org/react-native-fast-image/-/react-native-fast-image-8.6.3.tgz"
+  integrity sha512-Sdw4ESidXCXOmQ9EcYguNY2swyoWmx53kym2zRsvi+VeFCHEdkO+WG1DK+6W81juot40bbfLNhkc63QnWtesNg==
+
 "react-native-gesture-handler@>= 1.0.0", react-native-gesture-handler@~2.9.0:
   version "2.9.0"
   resolved "https://registry.npmjs.org/react-native-gesture-handler/-/react-native-gesture-handler-2.9.0.tgz"
@@ -7799,6 +7804,11 @@ react-native-codegen@^0.71.5:
     invariant "^2.2.4"
     lodash "^4.17.21"
     prop-types "^15.7.2"
+
+react-native-gif@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.npmjs.org/react-native-gif/-/react-native-gif-1.0.3.tgz"
+  integrity sha512-UXeT8Gyff0ksCTiRYNZ3DqykevG1vZUQLi7oe9pB7yS4nSlMn11w22/nOcNCpHuZsaod86+xPi1MSxtNkFNJ5g==
 
 react-native-gradle-plugin@^0.71.18:
   version "0.71.18"
@@ -7831,7 +7841,7 @@ react-native-reanimated@~2.14.4:
     react-freeze "^1.0.0"
     warn-once "^0.1.0"
 
-react-native@*, "react-native@^0.0.0-0 || 0.60 - 0.71 || 1000.0.0", react-native@>=0.57, react-native@0.71.8:
+react-native@*, "react-native@^0.0.0-0 || 0.60 - 0.71 || 1000.0.0", react-native@>=0.57, react-native@>=0.60.0, react-native@0.71.8:
   version "0.71.8"
   resolved "https://registry.npmjs.org/react-native/-/react-native-0.71.8.tgz"
   integrity sha512-ftMAuhpgTkbHU9brrqsEyxcNrpYvXKeATY+if22Nfhhg1zW+6wn95w9otwTnA3xHkljPCbng8mUhmmERjGEl7g==
@@ -7884,7 +7894,7 @@ react-shallow-renderer@^16.15.0:
     object-assign "^4.1.1"
     react-is "^16.12.0 || ^17.0.0 || ^18.0.0"
 
-react@*, "react@^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", react@^18.2.0, react@>=16.0, react@>=16.8, react@>=17.0.0, react@18.2.0:
+react@*, "react@^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^17 || ^18", react@^18.2.0, react@>=16.0, react@>=16.8, react@>=17.0.0, react@18.2.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==

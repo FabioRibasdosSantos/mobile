@@ -1,120 +1,110 @@
 import React from 'react';
-import {
-    View, 
-    Text,
-    StyleSheet,
-    TextInput,
-    TouchableOpacity
-} from 'react-native';
-
+import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import * as Animatable from 'react-native-animatable';
-import {useNavigation} from '@react-navigation/native'
+import { useNavigation } from '@react-navigation/native';
 
 export default function Topics() {
-    const navigation = useNavigation();
-    return (
-        <View style={styles.container}>
-            
-            <Animatable.View animation="fadeInLeft" delay={500} style={styles.containerHeader} >
-                <Text style={styles.message}>Nome do Aluno</Text>
-            </Animatable.View>
+  const navigation = useNavigation();
+  return (
+    <View style={styles.container}>
+      <Animatable.View animation="fadeInLeft" delay={500} style={styles.containerHeader}>
+        <Text style={styles.message}>Nome do Aluno</Text>
+      </Animatable.View>
 
-            <View animation="fadeInUp" style={styles.containerForm}>
-                
-            <TouchableOpacity 
-             style={styles.button}
-             onPress={ () => navigation.navigate('SingIn')}
-             >
-                <Text style={styles.buttonText}>Login</Text>
-            </TouchableOpacity>
+      <View style={styles.containerForm}>
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Calendario')}>
+          <Image style={styles.gif} source={require('../../assets/calendario.gif')} />
+          <Text style={styles.buttonText}>Calendario</Text>
+        </TouchableOpacity>
 
-                <TouchableOpacity style={styles.topic}>
-                    <Text style={styles.topicText}>Caixa 2</Text>
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('NotasEFrequencia')}>
+          <Image style={styles.gif} source={require('../../assets/grafico-de-linha.gif')} />
+          <Text style={styles.buttonText}>Notas e Frequencia</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Laboratorio')}>
+          <Image style={styles.gif} source={require('../../assets/microscopio.gif')} />
+          <Text style={styles.buttonText}>Reserva de Laboratório</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Contato')}>
+          <Image style={styles.gif} source={require('../../assets/apoio-suporte.gif')} />
+          <Text style={styles.buttonText}>Contato</Text>
+        </TouchableOpacity>
+
+                <TouchableOpacity 
+                style={styles.button}
+                onPress={ () => navigation.navigate('NotasEFrequencia')}
+                >
+                    <Text style={styles.buttonText}>Notas e Frequencia</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.topic}>
-                    <Text style={styles.topicText}>Caixa 3</Text>
+                <TouchableOpacity 
+                style={styles.button}
+                onPress={ () => navigation.navigate('NotasEFrequencia')}
+                >
+                    <Text style={styles.buttonText}>Notas e Frequencia</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.topic}>
-                    <Text style={styles.topicText}>Caixa 4</Text>
+                <TouchableOpacity 
+                style={styles.button}
+                onPress={ () => navigation.navigate('NotasEFrequencia')}
+                >
+                    <Text style={styles.buttonText}>Notas e Frequencia</Text>
                 </TouchableOpacity>
 
+                <TouchableOpacity 
+                style={styles.button}
+                onPress={ () => navigation.navigate('NotasEFrequencia')}
+                >
+                    <Text style={styles.buttonText}>Notas e Frequencia</Text>
+                </TouchableOpacity>
 
-
-              
-
-            </View>
-
-        </View>
-    );
+                </View>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
-    container:{
-        flex: 1,
-        backgroundColor: '#002659'
-    }, 
-        topic: { 
-            
-            marginTop: '14%',
-            marginBottom: '8%',
-            paddingStart: '5%'
-        },
-
-      containerHeader:{
-
-        marginTop: '20%',
-        marginBottom: '20%',
-        paddingStart: '5%'
-    },
-    message:{
-        fontSize: 28,
-        fontWeight: 'bold',
-        color: '#fff',
-        textAlign:'center'
-    },
-    containerForm:{
-        flexDirection:'row',
-        flexWrap:'wrap',
-        backgroundColor: '#fff',
-        padding: 30,
-        justifyContent:"space-between"
-        
-
-
-
-    },
-    title:{
-        fontSize: 20,
-        marginTop: 28
-    },
-    input:{
-        borderBottomWidth: 1,
-        height: 40,
-        marginBottom: 12,
-        fontSize: 16
-    },
-    button:{
-        backgroundColor: '#002659',
-        width: '100%',
-        borderRadius: 4,
-        paddingVertical: 8,
-        marginTop: 14,
-        justifyContent: 'center',
-        alignItems: 'center'
-    },
-    buttonText:{
-        color: '#fff',
-        fontSize: 18,
-        fontWeight: 'bold'
-    },
-    buttonRegister:{
-        marginTop: 14,
-        alignSelf: 'center'
-    },
-    registerText:{
-        color: '#a1a1a1'
-    }
-
-})
+  container: {
+    flex: 1,
+    backgroundColor: '#002659',
+  },
+  containerHeader: {
+    marginTop: '20%',
+    marginBottom: '20%',
+    paddingStart: '5%',
+  },
+  message: {
+    fontSize: 28,
+    fontWeight: 'bold',
+    color: '#fff',
+    textAlign: 'center',
+  },
+  containerForm: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    backgroundColor: '#fff',
+    padding: 30,
+    justifyContent: 'space-between',
+  },
+  button: {
+    backgroundColor: '#002659',
+    width: 80,
+    height: 120,
+    borderRadius: 40,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  buttonText: {
+    color: '#fff',
+    fontSize: 16,
+    marginTop: 8,
+    textAlign: 'center',
+  },
+  gif: {
+    width: 80,
+    height: 80,
+    borderRadius: 40,
+  },
+});
