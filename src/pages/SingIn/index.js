@@ -1,32 +1,11 @@
 import React, { useState } from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  TextInput,
-  TouchableOpacity,
-} from 'react-native';
-//import firebase from '../../firebase'; // Adjust the import path
-
+import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
 import * as Animatable from 'react-native-animatable';
 import { useNavigation } from '@react-navigation/native';
 
 export default function SignIn() {
-/*  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-
-  const handleEmailChange = (text) => setEmail(text);
-  const handlePasswordChange = (text) => setPassword(text);
-
-  const handleSignIn = () => {
-    firebase
-      .auth()
-      .signInWithEmailAndPassword(email, password)
-      .then(() => navigation.navigate('Topics'))
-      .catch((error) => alert(error.message));
-  };
-*/
   const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
       <Animatable.View animation="fadeInLeft" delay={500} style={styles.containerHeader}>
@@ -38,8 +17,6 @@ export default function SignIn() {
         <TextInput
           placeholder="Digite seu e-mail..."
           style={styles.input}
-          value={email}
-          onChangeText={handleEmailChange}
         />
 
         <Text style={styles.title}>Senha</Text>
@@ -47,15 +24,13 @@ export default function SignIn() {
           placeholder="Sua senha"
           style={styles.input}
           secureTextEntry={true}
-          value={password}
-          onChangeText={handlePasswordChange}
         />
 
-        <TouchableOpacity style={styles.button} /* onPress={() => handleSignIn()} */>
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Topics')}>
           <Text style={styles.buttonText}>Acessar</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.buttonRegister} /*onPress={() => navigation.navigate('Password')}*/>
+        <TouchableOpacity style={styles.buttonRegister} onPress={() => navigation.navigate('Password')}>
           <Text style={styles.registerText}>Esqueci minha Senha</Text>
         </TouchableOpacity>
       </Animatable.View>
