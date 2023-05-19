@@ -28,7 +28,7 @@ export default function Password() {
               },
               { 
                 text: "OK", 
-                onPress: () => navigation.navigate('SingIn'),
+                onPress: () => navigation.navigate('Login'),
             }
             ]
           );
@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         flex: 1,
         borderTopLeftRadius: 25,
-        borderBottomRightRadius: 25,
+        borderTopRightRadius:25, 
         paddingStart: '5%',
         paddingEnd: '5%'
     },

@@ -3,7 +3,9 @@ import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import * as Animatable from 'react-native-animatable';
 import { useNavigation } from '@react-navigation/native';
 
-export default function Topics() {
+import Icon from 'react-native-vector-icons/FontAwesome'
+
+export default function Aluno() {
   const navigation = useNavigation();
   return (
     <View style={styles.container}>
@@ -12,38 +14,53 @@ export default function Topics() {
       </Animatable.View>
 
       <View style={styles.containerForm}>
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Calendario')}>
-          <Image style={styles.gif} source={require('../../assets/calendario.gif')} />
+
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Calendario')}>         
+                    <View>
+                    <Icon name="calendar" size={30} color="#fff"/>
+                    </View>
           <Text style={styles.buttonText}>Calendario</Text>
-        </TouchableOpacity>
+          
+          </TouchableOpacity>
 
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('NotasEFrequencia')}>
-          <Image style={styles.gif} source={require('../../assets/grafico-de-linha.gif')} />
-          <Text style={styles.buttonText}>Notas e Frequencia</Text>
-        </TouchableOpacity>
+            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('NotasEFrequencia')}>
+            <View>
+                    <Icon name="qrcode" size={30} color="#fff"/>
+                    </View>
+              <Text style={styles.buttonText}>Notas </Text>
+            </TouchableOpacity>
 
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Laboratorio')}>
-          <Image style={styles.gif} source={require('../../assets/microscopio.gif')} />
-          <Text style={styles.buttonText}>Reserva de Laboratório</Text>
-        </TouchableOpacity>
+                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Laboratorio')}>
+                <View>
+                    <Icon name="folder-open-o" size={30} color="#fff"/>
+                    </View>
+                  <Text style={styles.buttonText}>Laboratório</Text>
+                </TouchableOpacity>
 
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Contato')}>
-          <Image style={styles.gif} source={require('../../assets/apoio-suporte.gif')} />
-          <Text style={styles.buttonText}>Contato</Text>
-        </TouchableOpacity>
+                  <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Contato')}>
+                  <View>
+                    <Icon name="phone" size={30} color="#fff"/>
+                    </View>
+                    <Text style={styles.buttonText}>Contato</Text>
+                  </TouchableOpacity>
 
                 <TouchableOpacity 
                 style={styles.button}
                 onPress={ () => navigation.navigate('NotasEFrequencia')}
                 >
+                  <View>
+                    <Icon name="line-chart" size={30} color="#fff"/>
+                    </View>
                     <Text style={styles.buttonText}>Notas e Frequencia</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity 
                 style={styles.button}
-                onPress={ () => navigation.navigate('NotasEFrequencia')}
-                >
-                    <Text style={styles.buttonText}>Notas e Frequencia</Text>
+                onPress={ () => navigation.navigate('NotasEFrequencia')}>
+                  <View>
+                    <Icon name="check" size={40} color="#fff" alignItens='center'justifyContent='center' />
+                  </View>
+                    {/* <Text style={styles.buttonText}></Text> */}
                 </TouchableOpacity>
 
                 <TouchableOpacity 
@@ -91,20 +108,18 @@ const styles = StyleSheet.create({
   button: {
     backgroundColor: '#002659',
     width: 80,
-    height: 120,
+    height: 80,
     borderRadius: 40,
     justifyContent: 'center',
     alignItems: 'center',
+    marginTop: 15,
+    marginStart:5,
   },
   buttonText: {
     color: '#fff',
-    fontSize: 16,
+    fontSize: 12,
     marginTop: 8,
     textAlign: 'center',
   },
-  gif: {
-    width: 80,
-    height: 80,
-    borderRadius: 40,
-  },
+ 
 });
