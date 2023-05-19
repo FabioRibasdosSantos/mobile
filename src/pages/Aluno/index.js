@@ -9,75 +9,73 @@ export default function Aluno() {
   const navigation = useNavigation();
   return (
     <View style={styles.container}>
-      <Animatable.View animation="fadeInLeft" delay={500} style={styles.containerHeader}>
-        <Text style={styles.message}>Nome do Aluno</Text>
-      </Animatable.View>
+
+      
+      
+        <Animatable.View animation="fadeInLeft" delay={500} style={styles.containerHeader}>
+          <Text style={styles.message}>Nome do Aluno</Text>
+        </Animatable.View>
+      
 
       <View style={styles.containerForm}>
 
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Calendario')}>         
-                    <View>
-                    <Icon name="calendar" size={30} color="#fff"/>
-                    </View>
-          <Text style={styles.buttonText}>Calendario</Text>
-          
+        <View>
+          <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Calendario')}>                   
+           <Icon name="calendar" size={30} color="#fff"/>             
           </TouchableOpacity>
+          <Text style={styles.buttonText}>Calendario</Text>
+        </View>
 
-            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('NotasEFrequencia')}>
-            <View>
-                    <Icon name="qrcode" size={30} color="#fff"/>
-                    </View>
-              <Text style={styles.buttonText}>Notas </Text>
+        <View>
+          <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('NotasEFrequencia')}>
+            <Icon name="book" size={30} color="#fff"/>                      
+          </TouchableOpacity>
+          <Text style={styles.buttonText}>Notas </Text>
+        </View>
+
+        <View>
+          <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Laboratorio')}>
+             <Icon name="flask" size={30} color="#fff"/>                             
+          </TouchableOpacity>
+          <Text style={styles.buttonText}>Laboratório</Text>
+        </View>
+
+        <View>                    
+          <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Contato')}>
+            <Icon name="phone" size={30} color="#fff"/>                               
+          </TouchableOpacity>
+          <Text style={styles.buttonText}>Contato</Text>
+        </View>
+
+        <View>
+          <TouchableOpacity style={styles.button} onPress={ () => navigation.navigate('NotasEFrequencia')} >
+            <Icon name="line-chart" size={30} color="#fff"/>                                 
+          </TouchableOpacity>
+          <Text style={styles.buttonText}>Analise</Text>
+        </View> 
+
+        <View>
+            <TouchableOpacity  style={styles.button} onPress={ () => navigation.navigate('NotasEFrequencia')}>
+              <Icon name="list" size={40} color="#fff" alignItens='center'justifyContent='center' />                                   
             </TouchableOpacity>
+            <Text style={styles.buttonText}>CheckList</Text>
+        </View>
 
-                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Laboratorio')}>
-                <View>
-                    <Icon name="folder-open-o" size={30} color="#fff"/>
-                    </View>
-                  <Text style={styles.buttonText}>Laboratório</Text>
-                </TouchableOpacity>
+        <View> 
+          <TouchableOpacity style={styles.button} onPress={ () => navigation.navigate('NotasEFrequencia')}>            
+            <Icon name="check" size={40} color="#fff" alignItens='center'justifyContent='center' />                              
+          </TouchableOpacity>
+          <Text style={styles.buttonText}>Avaliação</Text> 
+        </View>
 
-                  <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Contato')}>
-                  <View>
-                    <Icon name="phone" size={30} color="#fff"/>
-                    </View>
-                    <Text style={styles.buttonText}>Contato</Text>
-                  </TouchableOpacity>
+        <View>
+          <TouchableOpacity style={styles.button} onPress={ () => navigation.navigate('NotasEFrequencia')}>
+            <Icon name="building" size={40} color="#fff" alignItens='center'justifyContent='center' />              
+          </TouchableOpacity>
+          <Text style={styles.buttonText}>Estagios</Text>
+        </View>
 
-                <TouchableOpacity 
-                style={styles.button}
-                onPress={ () => navigation.navigate('NotasEFrequencia')}
-                >
-                  <View>
-                    <Icon name="line-chart" size={30} color="#fff"/>
-                    </View>
-                    <Text style={styles.buttonText}>Notas e Frequencia</Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity 
-                style={styles.button}
-                onPress={ () => navigation.navigate('NotasEFrequencia')}>
-                  <View>
-                    <Icon name="check" size={40} color="#fff" alignItens='center'justifyContent='center' />
-                  </View>
-                    {/* <Text style={styles.buttonText}></Text> */}
-                </TouchableOpacity>
-
-                <TouchableOpacity 
-                style={styles.button}
-                onPress={ () => navigation.navigate('NotasEFrequencia')}
-                >
-                    <Text style={styles.buttonText}>Notas e Frequencia</Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity 
-                style={styles.button}
-                onPress={ () => navigation.navigate('NotasEFrequencia')}
-                >
-                    <Text style={styles.buttonText}>Notas e Frequencia</Text>
-                </TouchableOpacity>
-
-                </View>
+      </View>
     </View>
   );
 }
@@ -116,10 +114,15 @@ const styles = StyleSheet.create({
     marginStart:5,
   },
   buttonText: {
-    color: '#fff',
-    fontSize: 12,
+    color: '#000',
+    fontSize: 18,
     marginTop: 8,
     textAlign: 'center',
+  },
+  logo:{
+    width:250,
+    resizeMode:'contain'
+
   },
  
 });
