@@ -28,7 +28,7 @@ export default function Aluno() {
 
         <View>
           <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('NotasEFrequencia')}>
-            <Icon name="book" size={30} color="#fff"/>                      
+            <Icon name="graduation-cap" size={30} color="#fff"/>                      
           </TouchableOpacity>
           <Text style={styles.buttonText}>Notas </Text>
         </View>
@@ -49,21 +49,21 @@ export default function Aluno() {
 
         <View>
           <TouchableOpacity style={styles.button} onPress={ () => navigation.navigate('NotasEFrequencia')} >
-            <Icon name="line-chart" size={30} color="#fff"/>                                 
+            <Icon name="bar-chart" size={30} color="#fff"/>                                 
           </TouchableOpacity>
-          <Text style={styles.buttonText}>Analise</Text>
+          <Text style={styles.buttonText}>Frequência</Text>
         </View> 
 
         <View>
             <TouchableOpacity  style={styles.button} onPress={ () => navigation.navigate('NotasEFrequencia')}>
-              <Icon name="list" size={40} color="#fff" alignItens='center'justifyContent='center' />                                   
+              <Icon name="archive" size={40} color="#fff" alignItens='center'justifyContent='center' />                                   
             </TouchableOpacity>
-            <Text style={styles.buttonText}>CheckList</Text>
+            <Text style={styles.buttonText}>Documentos</Text>
         </View>
 
         <View> 
           <TouchableOpacity style={styles.button} onPress={ () => navigation.navigate('NotasEFrequencia')}>            
-            <Icon name="check" size={40} color="#fff" alignItens='center'justifyContent='center' />                              
+            <Icon name="bomb" size={40} color="#fff" alignItens='center'justifyContent='center' />                              
           </TouchableOpacity>
           <Text style={styles.buttonText}>Avaliação</Text> 
         </View>
@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: '#000',
-    fontSize: 18,
+    fontSize: 15,
     marginTop: 8,
     textAlign: 'center',
   },
