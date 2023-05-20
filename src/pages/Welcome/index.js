@@ -33,7 +33,7 @@ const navigation = useNavigation();
             
              <TouchableOpacity 
              style={styles.button}
-             onPress={ () => navigation.navigate('SingIn')}
+             onPress={ () => navigation.navigate('Login')}
              >
                 <Text style={styles.buttonText}>Login</Text>
             </TouchableOpacity>   
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#fff',
         borderTopLeftRadius: 25,
-        borderBottomRightRadius: 25,
+        borderTopRightRadius:25,        
         paddingStart: '5%',
         paddingEnd: '5%'
     },

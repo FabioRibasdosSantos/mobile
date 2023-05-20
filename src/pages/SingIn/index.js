@@ -26,11 +26,11 @@ export default function SignIn() {
           secureTextEntry={true}
         />
 
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Topics')}>
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Menu')}>
           <Text style={styles.buttonText}>Acessar</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.buttonRegister} onPress={() => navigation.navigate('Password')}>
+        <TouchableOpacity style={styles.buttonRegister} onPress={() => navigation.navigate('Recuperar Senha')}>
           <Text style={styles.registerText}>Esqueci minha Senha</Text>
         </TouchableOpacity>
       </Animatable.View>
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     flex: 1,
     borderTopLeftRadius: 25,
-    borderBottomRightRadius: 25,
+    borderTopRightRadius:25, 
     paddingStart: '5%',
     paddingEnd: '5%',
   },
