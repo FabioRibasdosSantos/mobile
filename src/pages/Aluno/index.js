@@ -2,22 +2,25 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import * as Animatable from 'react-native-animatable';
 import { useNavigation } from '@react-navigation/native';
-
 import Icon from 'react-native-vector-icons/FontAwesome'
 
 export default function Aluno() {
   const navigation = useNavigation();
   return (
     <View style={styles.container}>
-
-      
       
         <Animatable.View animation="fadeInLeft" delay={500} style={styles.containerHeader}>
           <Text style={styles.message}>Nome do Aluno</Text>
         </Animatable.View>
-      
 
       <View style={styles.containerForm}>
+
+      <View>
+          <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Calendario')}>                   
+           <Icon name="user" size={30} color="#fff"/>             
+          </TouchableOpacity>
+          <Text style={styles.buttonText}>Perfil</Text>
+        </View>
 
         <View>
           <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Calendario')}>                   
@@ -28,9 +31,9 @@ export default function Aluno() {
 
         <View>
           <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('NotasEFrequencia')}>
-            <Icon name="graduation-cap" size={30} color="#fff"/>                      
+            <Icon name="check" size={30} color="#fff"/>                      
           </TouchableOpacity>
-          <Text style={styles.buttonText}>Notas </Text>
+          <Text style={styles.buttonText}>Check-in</Text>
         </View>
 
         <View>
@@ -63,7 +66,7 @@ export default function Aluno() {
 
         <View> 
           <TouchableOpacity style={styles.button} onPress={ () => navigation.navigate('NotasEFrequencia')}>            
-            <Icon name="bomb" size={40} color="#fff" alignItens='center'justifyContent='center' />                              
+            <Icon name="copy" size={40} color="#fff" alignItens='center'justifyContent='center' />                              
           </TouchableOpacity>
           <Text style={styles.buttonText}>Avaliação</Text> 
         </View>
@@ -73,6 +76,41 @@ export default function Aluno() {
             <Icon name="building" size={40} color="#fff" alignItens='center'justifyContent='center' />              
           </TouchableOpacity>
           <Text style={styles.buttonText}>Estagios</Text>
+        </View>
+
+        <View>
+          <TouchableOpacity style={styles.button} onPress={ () => navigation.navigate('NotasEFrequencia')}>
+            <Icon name="graduation-cap" size={40} color="#fff" alignItens='center'justifyContent='center' />              
+          </TouchableOpacity>
+          <Text style={styles.buttonText}>Certificados</Text>
+        </View>
+
+        <View>
+          <TouchableOpacity style={styles.button} onPress={ () => navigation.navigate('NotasEFrequencia')}>
+            <Icon name="comment" size={40} color="#fff" alignItens='center'justifyContent='center' />              
+          </TouchableOpacity>
+          <Text style={styles.buttonText}>Comunicados</Text>
+        </View>
+
+        <View>
+          <TouchableOpacity style={styles.button} onPress={ () => navigation.navigate('NotasEFrequencia')}>
+            <Icon name="wheelchair" size={40} color="#fff" alignItens='center'justifyContent='center' />              
+          </TouchableOpacity>
+          <Text style={styles.buttonText}>Acessibilidade</Text>
+        </View>
+
+        <View>
+          <TouchableOpacity style={styles.button} onPress={ () => navigation.navigate('NotasEFrequencia')}>
+            <Icon name="street-view" size={40} color="#fff" alignItens='center'justifyContent='center' />              
+          </TouchableOpacity>
+          <Text style={styles.buttonText}>Localização</Text>
+        </View>
+
+        <View>
+          <TouchableOpacity style={styles.button} onPress={ () => navigation.navigate('NotasEFrequencia')}>
+            <Icon name="site" size={40} color="#fff" alignItens='center'justifyContent='center' />              
+          </TouchableOpacity>
+          <Text style={styles.buttonText}>Site</Text>
         </View>
 
       </View>

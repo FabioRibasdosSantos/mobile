@@ -2,76 +2,125 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import * as Animatable from 'react-native-animatable';
 import { useNavigation } from '@react-navigation/native';
-import {AntDesing} from '@expo/vector-icons'
 import Icon from 'react-native-vector-icons/FontAwesome'
 
 export default function Professor() {
   const navigation = useNavigation();
   return (
     <View style={styles.container}>
+
       <Animatable.View animation="fadeInLeft" delay={500} style={styles.containerHeader}>
-        <Text style={styles.message}>Prof: Getileza</Text>
+        <Text style={styles.message}>Nome do Professor</Text>
       </Animatable.View>
 
       <View style={styles.containerForm}>
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Calendario')}>
-         {/* <View style={styles.areaButton}>
-          <AntDesing name="calendar" size={26} color="#000"/>
-         </View> */}
+
+      <View>
+          <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Calendario')}>                   
+           <Icon name="user" size={30} color="#fff"/>             
+          </TouchableOpacity>
+          <Text style={styles.buttonText}>Perfil</Text>
+        </View>
+
+        <View>
+          <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Calendario')}>                   
+           <Icon name="calendar" size={30} color="#fff"/>             
+          </TouchableOpacity>
           <Text style={styles.buttonText}>Calendario</Text>
-        </TouchableOpacity>
+        </View>
 
-        {/* <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('NotasEFrequencia')}>
-          <Image style={styles.gif} source={require('../../assets/grafico-de-linha.gif')} />
-          <Text style={styles.buttonText}>Notas e Frequencia</Text>
-        </TouchableOpacity>
+        <View>
+          <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('NotasEFrequencia')}>
+            <Icon name="check" size={30} color="#fff"/>                      
+          </TouchableOpacity>
+          <Text style={styles.buttonText}>Check-in</Text>
+        </View>
 
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Laboratorio')}>
-          <Image style={styles.gif} source={require('../../assets/microscopio.gif')} />
-          <Text style={styles.buttonText}>Reserva de Laboratório</Text>
-        </TouchableOpacity>
+        <View>
+          <TouchableOpacity style={styles.button} onPress={ () => navigation.navigate('NotasEFrequencia')}>
+            <Icon name="qrcode" size={40} color="#fff" alignItens='center'justifyContent='center' />              
+          </TouchableOpacity>
+          <Text style={styles.buttonText}>QR Code</Text>
+        </View>
 
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Contato')}>
-          <Image style={styles.gif} source={require('../../assets/apoio-suporte.gif')} />
+        <View>
+          <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Laboratorio')}>
+             <Icon name="flask" size={30} color="#fff"/>                             
+          </TouchableOpacity>
+          <Text style={styles.buttonText}>Laboratório</Text>
+        </View>
+
+        <View>                    
+          <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Contato')}>
+            <Icon name="phone" size={30} color="#fff"/>                               
+          </TouchableOpacity>
           <Text style={styles.buttonText}>Contato</Text>
-        </TouchableOpacity> */}
+        </View>
 
-                <TouchableOpacity 
-                style={styles.button}
-                onPress={ () => navigation.navigate('Calendario')}
-                >
-                    <View>
-                    <Icon name="calendar" size={30} color="#002659"/>
-                    </View>
-                    <Text style={styles.buttonText}>Calendario</Text>
-                </TouchableOpacity>
+        <View>
+          <TouchableOpacity style={styles.button} onPress={ () => navigation.navigate('NotasEFrequencia')} >
+            <Icon name="bar-chart" size={30} color="#fff"/>                                 
+          </TouchableOpacity>
+          <Text style={styles.buttonText}>Frequência</Text>
+        </View> 
 
-                <TouchableOpacity                 
-                style={styles.button}
-                onPress={ () => navigation.navigate('NotasEFrequencia')}
-                >
-                    <View>
-                    <Icon name="mobile" size={50} color="#002659"/>
-                    </View>
-                    <Text style={styles.buttonText}>Whats</Text>
-                    
-                </TouchableOpacity>
+        <View>
+            <TouchableOpacity  style={styles.button} onPress={ () => navigation.navigate('NotasEFrequencia')}>
+              <Icon name="archive" size={40} color="#fff" alignItens='center'justifyContent='center' />                                   
+            </TouchableOpacity>
+            <Text style={styles.buttonText}>Documentos</Text>
+        </View>
 
-                <TouchableOpacity 
-                style={styles.button}
-                onPress={ () => navigation.navigate('NotasEFrequencia')}
-                >
-                    <Text style={styles.buttonText}>Notas e Frequencia</Text>
-                </TouchableOpacity>
+        <View> 
+          <TouchableOpacity style={styles.button} onPress={ () => navigation.navigate('NotasEFrequencia')}>            
+            <Icon name="copy" size={40} color="#fff" alignItens='center'justifyContent='center' />                              
+          </TouchableOpacity>
+          <Text style={styles.buttonText}>Avaliação</Text> 
+        </View>
 
-                <TouchableOpacity 
-                style={styles.button}
-                onPress={ () => navigation.navigate('NotasEFrequencia')}
-                >
-                    <Text style={styles.buttonText}>Notas e Frequencia</Text>
-                </TouchableOpacity>
+        <View>
+          <TouchableOpacity style={styles.button} onPress={ () => navigation.navigate('NotasEFrequencia')}>
+            <Icon name="building" size={40} color="#fff" alignItens='center'justifyContent='center' />              
+          </TouchableOpacity>
+          <Text style={styles.buttonText}>Estagios</Text>
+        </View>
 
-                </View>
+        <View>
+          <TouchableOpacity style={styles.button} onPress={ () => navigation.navigate('NotasEFrequencia')}>
+            <Icon name="graduation-cap" size={40} color="#fff" alignItens='center'justifyContent='center' />              
+          </TouchableOpacity>
+          <Text style={styles.buttonText}>Certificados</Text>
+        </View>
+
+        <View>
+          <TouchableOpacity style={styles.button} onPress={ () => navigation.navigate('NotasEFrequencia')}>
+            <Icon name="comment" size={40} color="#fff" alignItens='center'justifyContent='center' />              
+          </TouchableOpacity>
+          <Text style={styles.buttonText}>Comunicados</Text>
+        </View>
+
+        <View>
+          <TouchableOpacity style={styles.button} onPress={ () => navigation.navigate('NotasEFrequencia')}>
+            <Icon name="wheelchair" size={40} color="#fff" alignItens='center'justifyContent='center' />              
+          </TouchableOpacity>
+          <Text style={styles.buttonText}>Acessibilidade</Text>
+        </View>
+
+        <View>
+          <TouchableOpacity style={styles.button} onPress={ () => navigation.navigate('NotasEFrequencia')}>
+            <Icon name="street-view" size={40} color="#fff" alignItens='center'justifyContent='center' />              
+          </TouchableOpacity>
+          <Text style={styles.buttonText}>Localização</Text>
+        </View>
+
+        <View>
+          <TouchableOpacity style={styles.button} onPress={ () => navigation.navigate('NotasEFrequencia')}>
+            <Icon name="site" size={40} color="#fff" alignItens='center'justifyContent='center' />              
+          </TouchableOpacity>
+          <Text style={styles.buttonText}>Site</Text>
+        </View>
+
+      </View>
     </View>
   );
 }
@@ -79,7 +128,7 @@ export default function Professor() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#002659',
   },
   containerHeader: {
     marginTop: '20%',
@@ -100,29 +149,25 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   button: {
-    flexDirection:'row',
-    backgroundColor: '#fff',
+    backgroundColor: '#002659',
     width: 80,
     height: 80,
     borderRadius: 40,
     justifyContent: 'center',
     alignItems: 'center',
-    paddingStart: '5%',
-    paddingEnd: '5%',
-    paddingVertical: 8,
-    marginTop: 18,
+    marginTop: 15,
     marginStart:5,
   },
   buttonText: {
     color: '#000',
-    fontWeight: 'bold',
-    fontSize: 16,
+    fontSize: 15,
     marginTop: 8,
     textAlign: 'center',
   },
-  gif: {
-    width: 80,
-    height: 80,
-    borderRadius: 40,
+  logo:{
+    width:250,
+    resizeMode:'contain'
+
   },
+ 
 });
